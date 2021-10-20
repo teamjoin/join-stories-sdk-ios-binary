@@ -1,0 +1,149 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JoinStoriesSDK
+import Alamofire
+import AlamofireImage
+import Foundation
+@_exported import JoinStoriesSDK
+import SafariServices
+import SnapKit
+import Swift
+import SwiftyJSON
+import UIKit
+import WebKit
+public enum NetworkError : Swift.Error {
+  case notFound
+  case badRequest
+  case unauthorized
+  case forbidden
+  public static func == (a: JoinStoriesSDK.NetworkError, b: JoinStoriesSDK.NetworkError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias SimpleClosure = (() -> ())
+extension StoryValue {
+  public init(fromJson json: SwiftyJSON.JSON)
+}
+public protocol NetworkSpec {
+  var baseUrl: Swift.String { get }
+  func httpGet(route: Swift.String, parameters: [Swift.String : Any]?, completionHandler: @escaping (Alamofire.DataResponse<Any>) -> Swift.Void)
+}
+public class Network : JoinStoriesSDK.NetworkSpec {
+  final public let baseUrl: Swift.String
+  public init(baseUrl: Swift.String)
+  public func httpGet(route: Swift.String, parameters: [Swift.String : Any]?, completionHandler: @escaping (Alamofire.DataResponse<Any>) -> Swift.Void)
+  @objc deinit
+}
+public let baseUrl: Swift.String
+public typealias StoriesCallback = ([JoinStoriesSDK.StoryValue]) -> Swift.Void
+public protocol StoriesApiSpec {
+  func fetchStories(fromTeam team: Swift.String, withAlias alias: Swift.String?, completion: @escaping JoinStoriesSDK.StoriesCallback)
+}
+public class StoriesApi : JoinStoriesSDK.StoriesApiSpec {
+  public init(network: JoinStoriesSDK.NetworkSpec = Network(baseUrl: baseUrl))
+  public func fetchStories(fromTeam team: Swift.String, withAlias alias: Swift.String?, completion: @escaping JoinStoriesSDK.StoriesCallback)
+  @objc deinit
+}
+public struct StoryValue {
+}
+public enum StoryPresentationMode {
+  case Sheet
+  case ViewController
+  public static func == (a: JoinStoriesSDK.StoryPresentationMode, b: JoinStoriesSDK.StoryPresentationMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIViewController {
+  public func presentStorySheet(story: JoinStoriesSDK.StoryValue, animated: Swift.Bool)
+  public func presentStoryPlayerController(story: JoinStoriesSDK.StoryValue, animated: Swift.Bool)
+}
+public protocol StoryWebViewDelegate {
+  func onCloseStory()
+}
+@objc @_inheritsConvenienceInitializers public class StoryPlayer : WebKit.WKWebView {
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc dynamic public init(frame: CoreGraphics.CGRect)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @objc override dynamic public func layoutSubviews()
+  public func addDelegate(_ delegate: JoinStoriesSDK.StoryWebViewDelegate?)
+  public func loadStory(story: JoinStoriesSDK.StoryValue)
+  @objc deinit
+}
+public protocol StoryScaffoldDelegate {
+  func onStorySelected(story: JoinStoriesSDK.StoryValue)
+}
+@objc @_inheritsConvenienceInitializers public class StoriesScaffolder : UIKit.UIView, JoinStoriesSDK.ThumbPressDelegate {
+  public var config: JoinStoriesSDK.StoryViewConfig
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public func withConfig(_ config: JoinStoriesSDK.StoryViewConfig) -> JoinStoriesSDK.StoriesScaffolder
+  public func buildScroller(withStories stories: [JoinStoriesSDK.StoryValue], andDelegate delegate: JoinStoriesSDK.StoryScaffoldDelegate)
+  public func buildGrid(stories: [JoinStoriesSDK.StoryValue], thumbDimension: Swift.Int, topOffset: Swift.Int, delegate: JoinStoriesSDK.StoryScaffoldDelegate)
+  public func onThumbPress(story: JoinStoriesSDK.StoryValue)
+  @objc deinit
+}
+public protocol ThumbPressDelegate {
+  func onThumbPress(story: JoinStoriesSDK.StoryValue)
+}
+@objc @_inheritsConvenienceInitializers public class StoryThumbView : UIKit.UIView {
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public init(thumbDimension: Swift.Int, labelDimension: Swift.Int, innerBorderColor: [UIKit.UIColor]?, outterBorderColor: [UIKit.UIColor]?, innerBorderWidth: Swift.Int?, outterBorderWidth: Swift.Int?, fontName: Swift.String?, labelColor: UIKit.UIColor?, withLabel: Swift.Bool?)
+  @objc override dynamic public func layoutSubviews()
+  public func addThumbDelegate(_ thumbPressDelegate: JoinStoriesSDK.ThumbPressDelegate?)
+  public func loadStory(story: JoinStoriesSDK.StoryValue)
+  @objc deinit
+}
+extension UIButton {
+  public func applySimpleStyle()
+}
+@_hasMissingDesignatedInitializers public class StoryViewConfigDefault {
+  public static let shared: JoinStoriesSDK.StoryViewConfigDefault
+  final public let containerDimension: Swift.Int
+  final public let dividerWidth: Swift.Int
+  final public let fontName: Swift.String
+  final public let labelColor: UIKit.UIColor
+  final public let withLabel: Swift.Bool
+  final public let innerBorderColor: [UIKit.UIColor]
+  final public let outterBorderColor: [UIKit.UIColor]
+  final public let innerBorderWidth: Swift.Int
+  final public let outterBorderWidth: Swift.Int
+  @objc deinit
+}
+public struct StoryViewConfig {
+  public var containerDimension: Swift.Int
+  public init(containerDimension: Swift.Int = StoryViewConfigDefault.shared.containerDimension, dividerWidth: Swift.Int = StoryViewConfigDefault.shared.dividerWidth, fontName: Swift.String = StoryViewConfigDefault.shared.fontName, labelColor: UIKit.UIColor = StoryViewConfigDefault.shared.labelColor, withLabel: Swift.Bool = StoryViewConfigDefault.shared.withLabel, innerBorderColor: [UIKit.UIColor] = StoryViewConfigDefault.shared.innerBorderColor, outterBorderColor: [UIKit.UIColor] = StoryViewConfigDefault.shared.outterBorderColor, innerBorderWidth: Swift.Int = StoryViewConfigDefault.shared.innerBorderWidth, outterBorderWidth: Swift.Int = StoryViewConfigDefault.shared.outterBorderWidth)
+}
+extension UIImageView {
+  public func addCircleGradiendBorder(withLineWidth width: CoreGraphics.CGFloat, andColors colors: [CoreGraphics.CGColor])
+}
+@objc @_inheritsConvenienceInitializers public class StoryPlayerViewController : UIKit.UIViewController, JoinStoriesSDK.StoryWebViewDelegate, WebKit.WKNavigationDelegate {
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  public func loadAndPresent(viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  public func onCloseStory()
+  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIViewController {
+  public func presentAlert(title: Swift.String, message: Swift.String)
+}
+extension UIView {
+  public func addTapGestureRecognizer(action: (() -> Swift.Void)?)
+}
+extension UIApplication {
+  public func topAreaInset() -> CoreGraphics.CGFloat
+}
+extension JoinStoriesSDK.NetworkError : Swift.Equatable {}
+extension JoinStoriesSDK.NetworkError : Swift.Hashable {}
+extension JoinStoriesSDK.StoryPresentationMode : Swift.Equatable {}
+extension JoinStoriesSDK.StoryPresentationMode : Swift.Hashable {}
