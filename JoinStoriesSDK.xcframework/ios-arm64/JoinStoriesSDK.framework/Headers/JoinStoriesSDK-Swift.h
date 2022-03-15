@@ -269,6 +269,7 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK25StoryPlayerViewController")
 - (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
 - (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
 - (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
+- (void)webView:(WKWebView * _Nonnull)webView didFailProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
@@ -303,6 +304,9 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK14StoryThumbView")
 
 
 
+/// Used for custom transition
+/// Implement UIViewControllerTransitioningDelegate`
+/// See https://developer.apple.com/documentation/uikit/animation_and_haptics/view_controller_transitions
 SWIFT_CLASS("_TtC14JoinStoriesSDK29StoryTransitionViewController")
 @interface StoryTransitionViewController : UIViewController
 - (void)viewDidLoad;
@@ -329,6 +333,7 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK29StoryTransitionViewController")
 
 @interface UIViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
 @end
+
 
 
 

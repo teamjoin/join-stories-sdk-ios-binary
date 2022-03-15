@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JoinStoriesSDK-Swift.h</key>
 		<data>
-		qYc5Bw5xgf+nwxWk8XonETZDlgA=
+		AvWP8PLIr16sUjDaRch0ZBgdd+U=
 		</data>
 		<key>Headers/JoinStoriesSDK.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ERS4/uvL9Zck6iyZjci4R3zcAXw=
+		G0SuBKtDKhHafpuWr4YnH3v9lBg=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		eXaCUBIdzrBX6M+YuqId61sVhV4=
+		YvpvxxmZBwSh14ZqNP9Z+OTuceI=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Oc00XeyK/dc58/mMXWAoX3+nuVU=
+		R/1kSP6KgO1xGrhiB/LJ+QcKgaI=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		mpzfV7+Wp69suMw5vR7hbkCkupk=
+		W0jPHFsymk27itJnudf0mB5QKWY=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		eXaCUBIdzrBX6M+YuqId61sVhV4=
+		YvpvxxmZBwSh14ZqNP9Z+OTuceI=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		Oc00XeyK/dc58/mMXWAoX3+nuVU=
+		R/1kSP6KgO1xGrhiB/LJ+QcKgaI=
 		</data>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		mpzfV7+Wp69suMw5vR7hbkCkupk=
+		W0jPHFsymk27itJnudf0mB5QKWY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z/t1Gzxs3XqCWsqOVrW8Qeb3d11tH2WmQT8HGZJmCbc=
+			VMgEc1VXNFQeZLjr5eZG6OKDgGfTXHbtkU+rkHSWrVs=
 			</data>
 		</dict>
 		<key>Headers/JoinStoriesSDK.h</key>
@@ -69,42 +69,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t2xMnN2OK4heW/FcqI6lMCZOgRcUZ1fDloV3ZmbwDLI=
+			bqvbJIdb69qeRVx4JK8HuQcyTz52Z7N00n/DbFHPw2o=
 			</data>
 		</dict>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pxqOFbBgp4LC37YXT3k6h8dTIV6YY/O5GBwVzKhN4r0=
+			PxVkFWqixVWq/Lh0/V2kYEQDXe/0746ZGwmH1TibXlc=
 			</data>
 		</dict>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DLtuKeUK7hAGbwGSMCNx3ZPYdOdfqkrPw4TMSP1UHRc=
+			Us1AT4QijaG+DjFROzRcssRgK/4cAIT2BT9p8KTfCRw=
 			</data>
 		</dict>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t2xMnN2OK4heW/FcqI6lMCZOgRcUZ1fDloV3ZmbwDLI=
+			bqvbJIdb69qeRVx4JK8HuQcyTz52Z7N00n/DbFHPw2o=
 			</data>
 		</dict>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pxqOFbBgp4LC37YXT3k6h8dTIV6YY/O5GBwVzKhN4r0=
+			PxVkFWqixVWq/Lh0/V2kYEQDXe/0746ZGwmH1TibXlc=
 			</data>
 		</dict>
 		<key>Modules/JoinStoriesSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DLtuKeUK7hAGbwGSMCNx3ZPYdOdfqkrPw4TMSP1UHRc=
+			Us1AT4QijaG+DjFROzRcssRgK/4cAIT2BT9p8KTfCRw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
