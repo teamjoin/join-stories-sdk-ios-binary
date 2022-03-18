@@ -39,9 +39,9 @@ public typealias StoriesCompletionHandler = (Swift.Result<Swift.Void, JoinStorie
   public static let shared: JoinStoriesSDK.JoinStories
   public static func setConfiguration(_ configuration: JoinStoriesSDK.JoinConfiguration, viewConfig: JoinStoriesSDK.StoryViewConfig? = nil)
   public static func startThumbView(alias: Swift.String, completion: @escaping JoinStoriesSDK.StoriesCallback)
-  public static func startPlayer(alias: Swift.String, fromController controller: UIKit.UIViewController, completion: @escaping JoinStoriesSDK.StoriesCompletionHandler)
+  public static func startPlayer(alias: Swift.String, fromController controller: UIKit.UIViewController, completion: @escaping JoinStoriesSDK.StoriesCompletionHandler, onDismiss: (() -> Swift.Void)? = nil)
   final public func fetchStories(alias: Swift.String, completion: @escaping JoinStoriesSDK.StoriesCallback)
-  final public func startPlayer(alias: Swift.String, fromController controller: UIKit.UIViewController, completion: @escaping JoinStoriesSDK.StoriesCompletionHandler)
+  final public func startPlayer(alias: Swift.String, fromController controller: UIKit.UIViewController, completion: @escaping JoinStoriesSDK.StoriesCompletionHandler, onDismiss: (() -> Swift.Void)? = nil)
   final public func getViewConfig() -> JoinStoriesSDK.StoryViewConfig?
   final public func thumbAndLabelDimensions(ratio: Swift.Double = 0.7) -> (thumbWidth: Swift.Int, labelWidth: Swift.Int)
   final public func containerDimension() -> Swift.Int
@@ -131,12 +131,12 @@ extension UIKit.UIViewController {
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func presentStorySheet(story: JoinStoriesSDK.StoryValue, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func presentStoryPlayer(stories: [JoinStoriesSDK.StoryValue], beginningAt indexPath: Foundation.IndexPath? = nil, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func presentStoryPlayer(stories: [JoinStoriesSDK.StoryValue], beginningAt indexPath: Foundation.IndexPath? = nil, animated: Swift.Bool, onDismiss: (() -> Swift.Void)? = nil)
 }
 extension UIKit.UIViewController : UIKit.UIViewControllerTransitioningDelegate {
 }
 public protocol StoryWebViewDelegate : WebKit.WKNavigationDelegate {
-  func onCloseStory()
+  func onPlayerDismiss()
   func didReceiveNoPreviousPageListener(on story: JoinStoriesSDK.StoryValue)
   func didReceiveNoNextPageListener(on story: JoinStoriesSDK.StoryValue)
 }
@@ -303,7 +303,7 @@ public protocol StoryNavigationDelegate {
   @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) public func onCloseStory()
+  @_Concurrency.MainActor(unsafe) public func onPlayerDismiss()
   @_Concurrency.MainActor(unsafe) public func didReceiveNoPreviousPageListener(on story: JoinStoriesSDK.StoryValue)
   @_Concurrency.MainActor(unsafe) public func didReceiveNoNextPageListener(on story: JoinStoriesSDK.StoryValue)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
