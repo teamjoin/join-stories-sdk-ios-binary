@@ -1,23 +1,25 @@
 // swift-tools-version:5.3
 import PackageDescription
+
 let package = Package(
     name: "JoinStoriesSDK",
-    platforms: [
-        .iOS(.v11)
-    ],
+    platforms: [.iOS(.v11)],
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "JoinStoriesSDK",
-            targets: ["JoinStoriesSDK"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.4.4")),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0")),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "4.0.0"))
+            targets: ["JoinStoriesSDK"]),
     ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
+
         .binaryTarget(
             name: "JoinStoriesSDK",
-            path: "JoinStoriesSDK.xcframework")
-    ])
+            url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/blob/spm/Releases/1.0.2/JoinStoriesSDK-1.0.2.zip",
+            checksum: "9df6db7692147097381bf70776c1d7b0c02cef1e343515de0f15059fffdb48cc"
+        )
+    ],
+    swiftLanguageVersions: [.v5]
+)
+
