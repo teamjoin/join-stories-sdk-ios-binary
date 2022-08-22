@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JoinStoriesSDK-Swift.h</key>
 		<data>
-		0GEVrbTAnr+2yituO4ojmjoxpyU=
+		QFvoVbXCwZyaIh1DzWBAA9ZGOYs=
 		</data>
 		<key>Headers/JoinStoriesSDK.h</key>
 		<data>
@@ -14,31 +14,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QESxSp2qoYJPEFXjB1GxDjuqScw=
+		uXrU5iivdTZe8fh3GfPB6r32TPI=
 		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Cq+zHc8T1gPXdpysHpt5f443OPU=
+		akX+qYMWCt2rS1NWunZqBqQqIKg=
 		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		bmP6uYcZkxV07Kzt1H45vMtqPQs=
+		sBrf6Damb0DSfJ7nl63bvIO6b5c=
 		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Pv7af2oY/U4abZKPdrrycSX2dAs=
-		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
-		<data>
-		pKpSNgk+ZU7V1Doa4g/zxApACe4=
-		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
-		<data>
-		Raqk4+PqmpmPuO0evhYX5R0n0Dc=
-		</data>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
-		<data>
-		FgWSV51jOFAdM7AdT2HHn6oso3g=
+		qRdOFzz3mhhYr17CQXtA1zO+14c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zCUsJYej8R1Ug505dSbs2P7ngJ75o534sMc70OgdmzY=
+			GXRUIJiPqrN0FNTESX0kG3ciSmveyA660nmm66EY2PA=
 			</data>
 		</dict>
 		<key>Headers/JoinStoriesSDK.h</key>
@@ -65,46 +53,25 @@
 			WLqamhBzrelS4TFShMm1jnXebElA26xcUK4ddF7mjSM=
 			</data>
 		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WPlDdkyJH6Hpvwyh3IoPJj+dPDZOHnkDiNFKXdy0NXU=
+			VMunwTJTgbI8wfpSScSkSVB7+zFyZMQM+d1jNPPU0t8=
 			</data>
 		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hwU7is7qYqjc8zl5akaqnpKfHrZiUib+6ku/YDezOz0=
+			WnSvPeBN3xCdGYGyNmWgQ8PjPmOGAxHvnv4ErN8yx4U=
 			</data>
 		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/JoinStoriesSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W6lVkJkplAx3NkCojNXXO5MkIPBNy7WuafPydJSrkHQ=
-			</data>
-		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			C3bCcN+29lAGS/28qYc+ZxW5/Co6VytWssnn8iBVI7c=
-			</data>
-		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WOQqqCMVZa8rR/bzSJtZuizrY4Ij0pFGRJoYod+z1rE=
-			</data>
-		</dict>
-		<key>Modules/JoinStoriesSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			6/K384I9oukGAUjyYBhAjhMvFiiMr9Fh7iG8ure31OI=
+			Z0166ToRVYRfAwVvKg/Ah+1Nj4xWcco4Ww9nx93CChw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

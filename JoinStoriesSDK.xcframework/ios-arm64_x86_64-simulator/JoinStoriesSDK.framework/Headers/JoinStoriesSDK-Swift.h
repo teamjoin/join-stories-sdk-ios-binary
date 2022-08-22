@@ -283,6 +283,12 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK25StoryPlayerViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface StoryPlayerViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UICollectionView;
 @class NSIndexPath;
 
@@ -329,18 +335,21 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK29StoryTransitionViewController")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@protocol UIViewControllerInteractiveTransitioning;
 
-
-
-
-
-
-
-
-
-
-@interface UIViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+@interface StoryTransitionViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
+
+
+
+
+
+
 
 
 
@@ -635,6 +644,12 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK25StoryPlayerViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface StoryPlayerViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class UICollectionView;
 @class NSIndexPath;
 
@@ -681,18 +696,21 @@ SWIFT_CLASS("_TtC14JoinStoriesSDK29StoryTransitionViewController")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@protocol UIViewControllerInteractiveTransitioning;
 
-
-
-
-
-
-
-
-
-
-@interface UIViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+@interface StoryTransitionViewController (SWIFT_EXTENSION(JoinStoriesSDK)) <UIViewControllerTransitioningDelegate>
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForPresentedController:(UIViewController * _Nonnull)presented presentingController:(UIViewController * _Nonnull)presenting sourceController:(UIViewController * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerAnimatedTransitioning> _Nullable)animationControllerForDismissedController:(UIViewController * _Nonnull)dismissed SWIFT_WARN_UNUSED_RESULT;
+- (id <UIViewControllerInteractiveTransitioning> _Nullable)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning> _Nonnull)animator SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
+
+
+
+
+
+
 
 
 
