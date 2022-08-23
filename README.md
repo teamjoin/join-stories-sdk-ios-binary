@@ -8,6 +8,7 @@ Join Stories SDK is a library written in Swift to display stories thumbnails, fu
 - [Dependencies](#dependencies)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [License](#license)
   
 ## Dependencies
 
@@ -72,3 +73,13 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 - And that's it!
 
+## License
+
+This project is licensed under the Intellectual Property Licensing and Confidentiality Agreements
+
+```
+Copyright (C) Join, Inc - All Rights Reserved  
+Unauthorized copying of this file, via any medium is strictly prohibited  
+Proprietary and confidential  
+Written by Dimitri COMBE, October 2021  
+```
