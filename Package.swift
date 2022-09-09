@@ -31,8 +31,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "JoinStoriesSDK",
-            url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/raw/spm-sub-dependencies/Releases/1.0.1/JoinStoriesSDK.zip",
-            checksum: "8e7810770ff4a2ccfcc55cb7c77e444d3c04ad99792f7a93ea12074fa71f6b73"
+            url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/raw/master/Releases/1.1.0/JoinStoriesSDK.zip",
+            checksum: "c995d80fb0c8fda6936627411b21621fab2b2185339ceadcbdd2c86c433180c2"
         ),
     ],
     swiftLanguageVersions: [.v5]
