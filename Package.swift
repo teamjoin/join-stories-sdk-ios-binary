@@ -16,7 +16,7 @@ let package = Package(
         .binaryTarget(
             name: "JoinStoriesSDK",
             url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/raw/master/Releases/1.1.0/JoinStoriesSDK.zip",
-            checksum: "c7dc7a98081ec10f82b9f36a0ab753ba3da3ff31140d07a780fda90399ecb718"
+            checksum: "cb894cb7e1a7d88a5114b67f6a6b8bfabb972f2da240dacada60f9141a11fd5e"
         ),
     ],
     swiftLanguageVersions: [.v5]
