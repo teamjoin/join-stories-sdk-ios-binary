@@ -5,20 +5,9 @@
 
 Join Stories SDK is a library written in Swift to display stories thumbnails, full screen stories.
 
-- [Dependencies](#dependencies)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
-  
-## Dependencies
-
-The Join Stories SDK is packaged into a binary target and has subdependencies such as:
-
-- [AlamofireImage](https://github.com/Alamofire/AlamofireImage) - An image library including image response serializers, `UIImage` and `UIImageView` extensions, custom image filters, an auto-purging in-memory cache, and a priority-based image downloading system.
-- [Alamofire](https://github.com/Alamofire/Alamofire) - Alamofire is an HTTP networking library written in Swift.
-- [SnapKit](https://github.com/SnapKit/SnapKit) - SnapKit is a DSL to make Auto Layout easy on both iOS and OS X.
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - SwiftyJSON makes it easy to deal with JSON data in Swift.
-
 
 ## Requirements
 
@@ -54,22 +43,11 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 
 #### Embedded Framework
 
-- Download the zip file from the Package.swift under `binartyTarget` up Terminal, 
+- Download the zip file from the Package.swift under `binaryTarget` up Terminal, 
 
 - Unzip the file appearing as an xcframework file
 
 - Add JoinStoriesSDK.xcframework into your project
-
-- Add external dependencies as described in the `Package.swift` file into Package dependencies of your project
-
-```swift
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0")),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0")
-    ],
-```
 
 - And that's it!
 
