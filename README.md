@@ -1,77 +1,58 @@
-[![Swift](https://img.shields.io/badge/Swift-5.3_5.4_5.5_5.6_5.7-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.3_5.4_5.5_5.6-Orange?style=flat-square)
-[![Platforms](https://img.shields.io/badge/Platforms-iOS-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-macOS_iOS_tvOS_watchOS_Linux_Windows-Green?style=flat-square)
-![CocoaPods Compatible](https://img.shields.io/cocoapods/v/JoinStoriesSDK.svg?style=flat-square)
-[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)
+# Join Stories SDK - iOS
 
-Join Stories SDK is a library written in Swift to display stories thumbnails, full screen stories.
-
-- [Dependencies](#dependencies)
-- [Requirements](#requirements)
-- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Deploy Swift Package](#deploy-swift-package)
 - [License](#license)
-  
-## Dependencies
 
-The Join Stories SDK is packaged into a binary target and has subdependencies such as:
+## Getting Started
 
-- [AlamofireImage](https://github.com/Alamofire/AlamofireImage) - An image library including image response serializers, `UIImage` and `UIImageView` extensions, custom image filters, an auto-purging in-memory cache, and a priority-based image downloading system.
-- [Alamofire](https://github.com/Alamofire/Alamofire) - Alamofire is an HTTP networking library written in Swift.
-- [SnapKit](https://github.com/SnapKit/SnapKit) - SnapKit is a DSL to make Auto Layout easy on both iOS and OS X.
-- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - SwiftyJSON makes it easy to deal with JSON data in Swift.
+To start working on this project:
+- Clone the repository to a local folder
+- To install the pods, type in a terminal (in the root folder): ```pod repo update``` and then ```pod install``` 
+- Open the ```JoinStoriesSDK.xcworkspace``` file with Xcode
+- Build & Launch the target JoinStoriesSDKDemo
+
+## Deploy Swift Package
+
+The Swift Package Manager for JoinStoriesSDK is located at
+https://github.com/teamjoin/join-stories-sdk-ios-binary
+
+To deploy a new version of the package, follow these steps:
+
+### Generate xcframework
+
+- Select target _JoinStoriesSDKFramework_ and launch build
+
+> The build will first generate a **zipped** .xcframework located in __framework_out_universal__ directory, plus a __checksum__ (_sha256_) of the associated zip file.
+
+### Update package
+
+- Checkout latest version of [join-stories-sdk-ios-binary](https://github.com/teamjoin/join-stories-sdk-ios-binary)
+- Upload the new xcframework (zipped one) generated on previous steps under *Releases* directory
+- Update `Package.swift` under _binaryTarget_ section with new `url` and `checksum` 
+- Push changes
+
+### Publish package version
+It’s a best practice to create a version tag for a Swift package.
+> **Note**
+Make sure to commit any changes that you want to include in the release of your Swift package before creating a version tag.
+
+It's easy to do it directly in Xcode
+
+> **Important**
+> If you want to use Xcode for version control, you should set up your account in Xcode preferences, otherwise, proceed as you use to with  with a Command Line Tool of via your favorite Editor and adapt the following steps.
+
+- In the Source Code Navigator, click the disclosure triangle next to Branches to show a list of your branches, then select a branch. 
+- In the history editor, Control-click a commit, then choose Tag “Your Identifier” from the pop-up menu. 
+- In the sheet that appears, enter a tag name that follows the semantic versioning standard, such as 1.2.4. Add an optional message, then click Create.
+
+> On Xcode:
+> Click the Source Control menu, select Push, choose the branch from the dropdown menu, check the checkbox next to Include Tags, and click Push.
+
+![tag-spm](assets/tag-spm.png)
 
 
-## Requirements
-
-| Platform | Minimum Swift Version | Installation |
-| --- | --- | --- |
-| iOS 11.0+ | 5.3 | [CocoaPods](#cocoapods), [Swift Package Manager](#swift-package-manager), [Manual](#manually) | Fully Tested |
-
-## Installation
-
-### CocoaPods
-
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate JoinStoriesSDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-pod 'JoinStoriesSDK'
-```
-
-### Swift Package Manager
-
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. 
-
-Once you have your Swift package set up, adding JoinStoriesSDK as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/teamjoin/join-stories-sdk-ios-binary", .upToNextMajor(from: "X.X.X"))
-]
-```
-
-### Manually
-
-If you prefer not to use any of the aforementioned dependency managers, you can integrate JoinStoriesSDK into your project manually.
-
-#### Embedded Framework
-
-- Download the zip file from the Package.swift under `binartyTarget` up Terminal, 
-
-- Unzip the file appearing as an xcframework file
-
-- Add JoinStoriesSDK.xcframework into your project
-
-- Add external dependencies as described in the `Package.swift` file into Package dependencies of your project
-
-```swift
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.0.1")),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", .upToNextMajor(from: "4.2.0")),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0")
-    ],
-```
-
-- And that's it!
+- Next, push your local changes and the version tag to your Git remote. 
 
 ## License
 
@@ -83,3 +64,5 @@ Unauthorized copying of this file, via any medium is strictly prohibited
 Proprietary and confidential  
 Written by Dimitri COMBE, October 2021  
 ```
+
+
