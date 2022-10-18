@@ -33,7 +33,7 @@ Once you have your Swift package set up, adding JoinStoriesSDK as a dependency i
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/teamjoin/join-stories-sdk-ios-binary", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/teamjoin/join-stories-sdk-ios-binary", .upToNextMajor(from: "1.2.3"))
 ]
 ```
 
