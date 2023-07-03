@@ -15,8 +15,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "JoinStoriesSDK",
-            url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/raw/master/Releases/1.3.0/JoinStoriesSDK.zip",
-            checksum: "c8bc4aed5a25c34f935660cd4a38c1169a4a530b3b6e334be2cfb5b6fe9fe915"
+            url: "https://github.com/teamjoin/join-stories-sdk-ios-binary/raw/master/Releases/1.3.1/JoinStoriesSDK.zip",
+            checksum: "9e9a9cf69a062c2035eccf05507f57357ea30b0074d6606a667aea82e390878a"
         ),
     ],
     swiftLanguageVersions: [.v5]
